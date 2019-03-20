@@ -156,6 +156,8 @@ class Bw_Particlejs_Element {
 
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
+		$this->loader->add_action( 'admin_menu', $plugin_admin, 'particlesjs_menu_page' );
+		$this->loader->add_action( 'admin_init', $plugin_admin, 'particlesjs_settings' );
 
 	}
 
@@ -173,7 +175,15 @@ class Bw_Particlejs_Element {
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
 		$this->loader->add_action( 'init', $plugin_public, 'register_shortcodes' );
-		$this->loader->add_action( 'wp_footer', $plugin_public, 'particlejs_output' );
+
+
+		$pjs_urlpath = get_option( 'pjs_urlpath' );
+
+		if ( $_SERVER['REQUEST_URI'] == $pjs_urlpath ) {
+
+			$this->loader->add_action( 'wp_footer', $plugin_public, 'particlejs_output' );
+
+		} else {}
 
 	}
 
