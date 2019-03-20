@@ -98,6 +98,44 @@ class Bw_Particlejs_Element_Public {
 
 		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/bw-particlejs-element-public.js', array( 'jquery' ), $this->version, false );
 
+		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/particles.js', array(), $this->version, false );
+
 	}
+
+	/**
+	 * Function to create [particle element="name"] shortcode that renders the element with a particle.js background
+	 */
+	public function particlejs_shortcode( $atts ) {
+
+		$atts = shortcode_atts(
+			array( 'element' => '' ),
+			$atts
+		);
+
+		ob_start();
+
+		return ob_get_clean();
+
+	}
+
+	/**
+	 * Registers all shortcodes at once
+	 */
+	public function register_shortcodes() {
+
+		add_shortcode( 'particlejs', array( $this, 'particlejs_shortcode' ) );
+
+	}
+
+	/**
+	 * Function to load plugin settings and output particle.js scripts to footer
+	 */
+	public function particlejs_output() {
+		?>
+			<script type="text/javascript">
+
+			</script>
+		<?php
+	} 
 
 }
