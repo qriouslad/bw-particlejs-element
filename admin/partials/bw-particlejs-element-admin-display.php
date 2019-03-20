@@ -14,3 +14,21 @@
 ?>
 
 <!-- This file should primarily consist of HTML with a little bit of PHP. -->
+
+<div class="wrap particlesjs-settings">
+
+	<form action="options.php" method="post">
+
+		<?php
+
+		settings_fields( 'particlesjs' );
+
+		do_settings_sections( 'particlesjs' );
+
+		submit_button( 'Save Settings' );
+
+		?>
+
+	</form>
+
+</div>
