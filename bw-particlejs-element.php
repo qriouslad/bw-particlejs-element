@@ -9,7 +9,7 @@
  * that starts the plugin.
  *
  * @link              https://bowo.io
- * @since             0.3
+ * @since             0.4
  * @package           Bw_Particlejs_Element
  *
  * @wordpress-plugin
