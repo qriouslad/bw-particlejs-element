@@ -1,3 +1,16 @@
+<?php
+
+/**
+ * Provides default JSON config for particles.js
+ *
+ * @link       https://bowo.io
+ * @since      1.0.0
+ *
+ * @package    Bw_Particlejs_Element
+ * @subpackage Bw_Particlejs_Element/public/partials
+ */
+?>
+<!-- This file should primarily consist of HTML with a little bit of PHP. -->
 {
   "particles": {
     "number": {
@@ -8,7 +21,7 @@
       }
     },
     "color": {
-      "value": "#ffffff"
+      "value": "#dddddd"
     },
     "shape": {
       "type": "circle",
@@ -48,7 +61,7 @@
     "line_linked": {
       "enable": true,
       "distance": 150,
-      "color": "#ffffff",
+      "color": "#dddddd",
       "opacity": 0.4,
       "width": 1
     },
