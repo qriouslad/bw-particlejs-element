@@ -150,9 +150,31 @@ class Bw_Particlejs_Element_Public {
 	}
 
 	/**
+	 * Function to load css related to the particle.js element
+	 */
+	public function particlejs_style_output() {
+
+		$elementid = get_option( 'pjs_elementid' );
+
+		?>
+
+		<style>
+
+			#<?php echo $elementid; ?> {
+				position: relative;
+			}
+
+		</style>
+
+		<?php
+
+	}
+
+
+	/**
 	 * Function to load plugin settings and output particle.js scripts to footer
 	 */
-	public function particlejs_output() {
+	public function particlejs_script_output() {
 
 		$elementid = get_option( 'pjs_elementid' );
 
