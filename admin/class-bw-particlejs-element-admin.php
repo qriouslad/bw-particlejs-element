@@ -164,7 +164,7 @@ class Bw_Particlejs_Element_Admin {
 
 	public function particlejs_settings_section1_cb() {
 
-		echo '<p>This plugin enables <a href="https://vincentgarreau.com/particles.js/">particles.js</a> animated background on a page, in a particular HTML element with a JSON configuration specified below.</p>';
+		echo '<p>The settings in this section enables <a href="https://vincentgarreau.com/particles.js/">particles.js</a> animated background on a page, in a particular HTML element with the specified JSON configuration. If you\'re using a <a href="https://www.wpbeginner.com/beginners-guide/best-drag-and-drop-page-builders-for-wordpress/">page builder</a>, you will likely apply this to a full-width row module with a custom ID you specify in the <a href="https://help.artbees.net/how-to-s/elementor/assigning-an-id-or-class-to-an-element-in-elementor">advanced settings</a> of the module.</p>';
 		
 	}
 
@@ -184,7 +184,7 @@ class Bw_Particlejs_Element_Admin {
 
 		echo '<input type="text" size="43" name="pjs_elementid" value="' . esc_attr( $elementid ) . '" placeholder="e.g. particlesbg-row">';
 
-		echo '<p class="description">The ID of the HTML element on the page to put <br />the particles.js animation in. Please leave out the <br />\'#\' symbol</p>';
+		echo '<p class="description">The ID of the HTML element on the page to put <br />the particles.js animation in. You will need to set <br /><strong>"position: relative"</strong> for this element in your CSS.</p>';
 
 	}
 
@@ -192,7 +192,7 @@ class Bw_Particlejs_Element_Admin {
 
 		$jsonconfig = get_option( 'pjs_json_config' );
 
-		echo '<textarea rows="15" cols="45" name="pjs_json_config">' . esc_html( $jsonconfig ) . '</textarea>';
+		echo '<textarea rows="10" cols="45" name="pjs_json_config">' . esc_html( $jsonconfig ) . '</textarea>';
 
 		echo '<p class="description">Get JSON config from the controls box on the <br />particles.js <a href="https://vincentgarreau.com/particles.js/">demo site</a>. If left empty, a default <br />config wll be used.</p>';
 
