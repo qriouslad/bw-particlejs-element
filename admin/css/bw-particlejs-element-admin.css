@@ -6,3 +6,25 @@
  mark {
  	background-color: #cde1bb;
  }
+
+.layout-half {
+ 	width: 48%;
+ 	float: left;
+}
+
+.layout-half:first-child {
+	margin-right: 4%;
+}
+
+.layout-half p {
+	font-size: 14px;
+}
+
+.code-sample {
+	background: #fff;
+	padding: 0.5em 1.5em;
+}
+
+.layout-half p.shortcode-sample {
+	font-size: 16px;
+}

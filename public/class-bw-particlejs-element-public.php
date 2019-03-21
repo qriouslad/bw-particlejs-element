@@ -108,14 +108,32 @@ class Bw_Particlejs_Element_Public {
 	public function particlejs_shortcode( $atts ) {
 
 		$atts = shortcode_atts(
-			array( 'element' => 'particles-bg' ),
+			array( 
+				'minheight' => '80px',
+				'bgcolor' => '#333333',
+				'textcolor' => '#ffffff',
+				'heading' => 'Content Heading',
+				'description' => 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus.
+
+',
+			),
 			$atts
 		);
+
+		$jsonconfig = get_option( 'pjs_json_config' );
 
 		ob_start();
 		?>
 
-		<div id="particles-bg" style="background:#000;"></div>
+		<div id="particlesbg" style="position:relative; text-align:center; padding:1.5em; min-height:<?php echo esc_attr( $atts['minheight'] ); ?>; color:<?php echo esc_attr( $atts['textcolor'] ); ?>; background:<?php echo esc_attr( $atts['bgcolor'] ); ?>;">
+			<h2 style="color:<?php echo esc_attr( $atts['textcolor'] ); ?>;"><?php echo $atts['heading']; ?></h2>
+			<p><?php echo $atts['description']; ?></p>
+		</div>
+
+		<script type="text/javascript">
+
+			particlesJS( 'particlesbg', <?php echo $jsonconfig; ?> );
+		</script>
 
 		<?php
 		return ob_get_clean();
@@ -127,7 +145,7 @@ class Bw_Particlejs_Element_Public {
 	 */
 	public function register_shortcodes() {
 
-		add_shortcode( 'particlejs', array( $this, 'particlejs_shortcode' ) );
+		add_shortcode( 'particles', array( $this, 'particlejs_shortcode' ) );
 
 	}
 
