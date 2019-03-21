@@ -181,7 +181,9 @@ class Bw_Particlejs_Element {
 
 		if ( $_SERVER['REQUEST_URI'] == $pjs_urlpath ) {
 
-			$this->loader->add_action( 'wp_footer', $plugin_public, 'particlejs_output' );
+			$this->loader->add_action( 'wp_head', $plugin_public, 'particlejs_style_output' );
+
+			$this->loader->add_action( 'wp_footer', $plugin_public, 'particlejs_script_output' );
 
 		} else {}
 

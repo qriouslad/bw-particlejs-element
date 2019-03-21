@@ -47,7 +47,15 @@
 
 		</div>
 
-		<p>The <strong><em>minheight</em></strong> attribute specifies the minimum height of the element in pixels, the <strong><em>bgcolor</em></strong> attribute specifies the background color, and <strong><em>textcolor</em></strong> specifies the color of the text inside the element. Colors need to use the <a href="https://www.color-hex.com/">hex format</a>. The <strong><em>heading</em></strong> and <strong><em>description</em></strong> attributes is for the actual content that will be displayed inside the div element.</p>
+		<p>If we remove the parameter value, the shortcode looks like this:</p>
+
+		<div class="code-sample">
+
+			<p class="shortcode-sample">[particles <strong>minheight</strong>="" <strong>bgcolor</strong>="" <strong>textcolor</strong>="" <strong>heading=</strong>"" <strong>description</strong>=""]</p>
+
+		</div>
+
+		<p>The <strong><em>minheight</em></strong> attribute specifies the minimum height of the element in pixels, the <strong><em>bgcolor</em></strong> attribute specifies the background color, and <strong><em>textcolor</em></strong> specifies the color of the text inside the element. Colors need to use the <a href="https://www.color-hex.com/">hex format</a>. The <strong><em>heading</em></strong> and <strong><em>description</em></strong> attributes are for the actual content that will be displayed inside the particles.js element.</p>
 
 		<p>Note that the particle.js animation will use the JSON configuration specified on this page.</p>
 
