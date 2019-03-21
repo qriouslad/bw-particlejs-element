@@ -22,9 +22,22 @@
 
 .code-sample {
 	background: #fff;
-	padding: 0.5em 1.5em;
+	padding: 0.25em 1.5em;
 }
 
 .layout-half p.shortcode-sample {
 	font-size: 16px;
+}
+
+@media (max-width:768px) {
+
+	.layout-half {
+	 	width: 100%;
+	 	float: none;
+	}
+
+	.layout-half:first-child {
+		margin-right: 0;
+	}
+
 }

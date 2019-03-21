@@ -110,7 +110,7 @@ class Bw_Particlejs_Element_Admin {
 			'Particles.js Element',
 			'manage_options',
 			'particlesjs_element',
-			array( $this, 'settings_menu_html' ),
+			array( $this, 'settings_page_html' ),
 		);
 	}
 
@@ -184,7 +184,7 @@ class Bw_Particlejs_Element_Admin {
 
 		echo '<input type="text" size="43" name="pjs_elementid" value="' . esc_attr( $elementid ) . '" placeholder="e.g. particlesbg-row">';
 
-		echo '<p class="description">The ID of the HTML element on the page to put <br />the particles.js animation in. You will need to set <br /><strong>"position: relative"</strong> for this element in your CSS.</p>';
+		echo '<p class="description">The ID of the HTML element on the page to put <br />the particles.js animation in.</p>';
 
 	}
 
@@ -201,7 +201,7 @@ class Bw_Particlejs_Element_Admin {
 	/**
 	 * Display form for changing settings
 	 */
-	public function settings_menu_html() {
+	public function settings_page_html() {
 
 		// Check user capabilities
 		if ( ! current_user_can( 'manage_options' ) ) {
