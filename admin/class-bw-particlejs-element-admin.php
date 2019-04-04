@@ -110,7 +110,7 @@ class Bw_Particlejs_Element_Admin {
 			'Particles.js Element',
 			'manage_options',
 			'particlesjs_element',
-			array( $this, 'settings_page_html' ),
+			array( $this, 'settings_page_html' )
 		);
 	}
 
@@ -130,7 +130,7 @@ class Bw_Particlejs_Element_Admin {
 			'particlejs_settings_section1',
 			'Settings for Particles.js Element',
 			array( $this, 'particlejs_settings_section1_cb' ),
-			'particlesjs',
+			'particlesjs'
 		);
 
 		// Add a field for page slug
@@ -139,7 +139,7 @@ class Bw_Particlejs_Element_Admin {
 			'Page URL Path',
 			array( $this, 'particlejs_field_urlpath_cb' ),
 			'particlesjs',
-			'particlejs_settings_section1',
+			'particlejs_settings_section1'
 		);
 
 		// Add a field for element #id
@@ -148,7 +148,7 @@ class Bw_Particlejs_Element_Admin {
 			'Element #ID',
 			array( $this, 'particlejs_field_elementid_cb' ),
 			'particlesjs',
-			'particlejs_settings_section1',
+			'particlejs_settings_section1'
 		);
 
 		// Add a field for JSON config
@@ -157,7 +157,7 @@ class Bw_Particlejs_Element_Admin {
 			'JSON Configuration',
 			array( $this, 'particlejs_field_json_cb' ),
 			'particlesjs',
-			'particlejs_settings_section1',
+			'particlejs_settings_section1'
 		);
 
 	}
