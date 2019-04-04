@@ -15,6 +15,7 @@
  * @wordpress-plugin
  * Plugin Name:       Particle.js Element for WordPress
  * Plugin URI:        https://github.com/qriouslad/bw-particlejs-element
+ * GitHub Plugin URI:        https://github.com/qriouslad/bw-particlejs-element
  * Description:       This is a WordPress plugin to add particle.js background to an HTML element.
  * Version:           1.0.0
  * Author:            Bowo
