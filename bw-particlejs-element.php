@@ -17,7 +17,7 @@
  * Plugin URI:        https://github.com/qriouslad/bw-particlejs-element
  * GitHub Plugin URI:        https://github.com/qriouslad/bw-particlejs-element
  * Description:       WordPress plugin to add customizable particles.js animated background to an HTML element. Shortcode also available.
- * Version:           1.1
+ * Version:           1.1.1
  * Author:            Bowo
  * Author URI:        https://bowo.io
  * License:           GPL-2.0+
